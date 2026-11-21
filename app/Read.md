@@ -1,0 +1,1 @@
+& "C:\Users\MinulChathumal\AppData\Local\Python\pythoncore-3.15-64\python.exe" -m streamlit run app.py
