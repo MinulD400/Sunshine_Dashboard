@@ -52,10 +52,12 @@ html, body, [class*="css"], .stApp {{ font-family:'DM Sans',sans-serif; color:{I
 
 /* other controls */
 div[role="radiogroup"] {{ gap:12px !important; flex-wrap:wrap; }}
-.stRadio:not(.st-key-nav) label {{ background:{CARD}; border:1px solid {LINE}; border-radius:10px; padding:9px 20px !important; margin:0 !important; }}
-.stRadio:not(.st-key-nav) label:has(input:checked) {{ background:{GOLD}; border-color:{GOLD}; }}
-.stRadio:not(.st-key-nav) label:has(input:checked) p {{ color:#2B1A08 !important; }}
-.stRadio:not(.st-key-nav) label > div:first-child {{ display:none; }}
+.stRadio:not(.st-key-nav) label[data-baseweb="radio"] {{ background:{CARD}; border:1px solid {LINE}; border-radius:10px; padding:9px 20px !important; margin:0 !important; }}
+.stRadio:not(.st-key-nav) label[data-baseweb="radio"]:has(input:checked) {{ background:{GOLD}; border-color:{GOLD}; }}
+.stRadio:not(.st-key-nav) label[data-baseweb="radio"]:has(input:checked) p {{ color:#2B1A08 !important; }}
+.stRadio:not(.st-key-nav) label[data-baseweb="radio"] > div:first-child {{ display:none !important; }}
+.stRadio [data-testid="stWidgetLabel"] {{ margin-bottom:14px; }}
+.stRadio [data-testid="stWidgetLabel"] label {{ background:transparent !important; border:none !important; padding:0 !important; }}
 .stRadio label p {{ font-size:16px; font-weight:600; }}
 div[data-baseweb="select"] > div {{ background:{CARD} !important; border:1px solid {LINE} !important; border-radius:10px !important; min-height:50px; font-size:16.5px; }}
 label p, [data-testid="stCaptionContainer"] {{ color:{SOFT} !important; font-size:16px !important; font-weight:500; }}
@@ -64,12 +66,12 @@ label p, [data-testid="stCaptionContainer"] {{ color:{SOFT} !important; font-siz
 .h2 {{ font-size:30px; font-weight:700; margin:0 0 6px 0; letter-spacing:-.01em; }}
 .sub {{ color:{SOFT}; font-size:18px; margin:0 0 24px 0; max-width:900px; line-height:1.5; }}
 .gap {{ height:44px; }}
-.kpis {{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-bottom:12px; }}
-.kpi {{ background:{CARD}; border:1px solid {LINE}; border-radius:16px; padding:26px 28px; }}
+.kpis {{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-bottom:12px; }}
+.kpi {{ background:{CARD}; border:1px solid {LINE}; border-radius:14px; padding:16px 22px; }}
 .kpi.main {{ background:#3A2A10; border-color:{GOLD}; }}
-.kpi .l {{ font-size:14px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:{FAINT}; }}
-.kpi .v {{ font-size:40px; font-weight:700; margin-top:10px; line-height:1.1; }}
-.kpi .s {{ font-size:16px; color:{SOFT}; margin-top:10px; }}
+.kpi .l {{ font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:{FAINT}; }}
+.kpi .v {{ font-size:28px; font-weight:700; margin-top:4px; line-height:1.1; }}
+.kpi .s {{ font-size:14px; color:{SOFT}; margin-top:4px; }}
 .kpi.main .v {{ color:{GOLD}; }}
 .panel {{ background:{CARD}; border:1px solid {LINE}; border-radius:16px; padding:30px 34px; }}
 .panel h4 {{ margin:0 0 12px 0; font-size:22px; font-weight:700; }}
